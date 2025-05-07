@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 45000,
+      "image": "https://via.placeholder.com/100"
+    },
+    {
+      "id": 2,
+      "name": "Mouse",
+      "price": 500,
+      "image": "https://via.placeholder.com/100"
+    },
+    {
+      "id": 3,
+      "name": "Keyboard",
+      "price": 1000,
+      "image": "https://via.placeholder.com/100"
+    }
+  ]
+}
