@@ -32,9 +32,9 @@ function ProductCard() {
     product.title.toLowerCase().includes(search.toLowerCase())
   )
   return (
-    <div className='max-w-6xl mx-auto px-4'>
+    <div className='w-full flex flex-col items-center'>
       {/* Search Bar */}
-      <div className='mb-6'>
+      <div className='mb-6 flex justify-center'>
         <input
           type='text'
           placeholder='Search products...'
@@ -45,19 +45,19 @@ function ProductCard() {
       </div>
 
       {/* Product Grid */}
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 max-w-7xl w-full'>
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <div
               key={product.id}
-              className='bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300'
+              className='bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col'
             >
               <img
                 src={product.image}
                 alt={product.title}
-                className='h-48 w-full object-contain p-4 bg-gray-50'
+                className='w-full h-48 object-cover rounded-t-lg'
               />
-              <div className='p-4'>
+              <div className='p-4 flex-1 flex flex-col'>
                 <h2 className='text-md font-semibold mb-1 line-clamp-2'>
                   {product.title}
                 </h2>
@@ -67,7 +67,7 @@ function ProductCard() {
                 <p className='text-green-600 font-bold text-lg mb-3'>
                   ₹{Math.floor(product.price * 80)}
                 </p>
-                <button className='w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition'>
+                <button className='mt-auto bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition'>
                   Add to Cart
                 </button>
               </div>
